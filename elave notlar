@@ -1,0 +1,5 @@
+İstifadə edəcəyimiz bu skripti test üçün hazır saytlar üzərində yoxlayacağıq məsələn
+http://www.dvwa.co.uk/-SQL injection və digər zəiflikləri öyrənmək üçün.
+http://www.itsecgames.com/-Bir çox zəiflik növünü test etmək üçün.
+VulnWeb: Acunetix tərəfindən təklif olunan və SQL injection testi üçün uyğun bir sayt.
+Mən isə ilk saytı target olaraq seçirəm və bunu da kodda sondakı baseurl hissəsində qeyd edirəm.Son olaraq kodu işə saldıqda nəticə üçün result.txt də olmağını istəyirəm

